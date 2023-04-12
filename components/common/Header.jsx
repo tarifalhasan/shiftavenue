@@ -55,12 +55,12 @@ const Header = ({ opacity }) => {
               </ul>
             </li>
             <li>
-              <Link className="font-NeuePlakRegular" href={'jobs'}>
+              <Link className="font-NeuePlakRegular" href={'/jobs'}>
                 Jobs
               </Link>
             </li>
             <li>
-              <Link className="font-NeuePlakRegular" href={'blog'}>
+              <Link className="font-NeuePlakRegular" href={'/blog'}>
                 Blog
               </Link>
             </li>
@@ -74,11 +74,7 @@ const Header = ({ opacity }) => {
                 Contact
               </Link>
             </li>
-            <li>
-              <Link className="font-NeuePlakRegular" href={'about'}>
-                About
-              </Link>
-            </li>
+
             <li tabIndex={0}>
               <a className="font-NeuePlakRegular">
                 <svg

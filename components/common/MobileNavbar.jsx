@@ -83,32 +83,32 @@ const MobileMenu = ({ opacity }) => {
           </div>
           <div className="flex flex-col gap-3 mb-5">
             <Link
-              href={'/'}
+              href={'/services'}
               className=" border-white border-opacity-10 border-l-0 border-r-0"
             >
               <span className="nav-link px-4">Services</span>
             </Link>
             <Link
               className="border-t border-white border-opacity-10 border-l-0 border-r-0"
-              href={'/'}
+              href={'/jobs'}
             >
               <span className="nav-link px-4">Jobs</span>
             </Link>
             <Link
               className="border-t border-white border-opacity-10 border-l-0 border-r-0"
-              href={'/'}
+              href={'/blog'}
             >
               <span className="nav-link px-4">Blog</span>
             </Link>
             <Link
               className="border-t border-white border-opacity-10 border-l-0 border-r-0"
-              href={'/'}
+              href={'/about'}
             >
               <span className="nav-link px-4">About</span>
             </Link>
             <Link
               className="border-t border-white border-opacity-10 border-l-0 border-r-0"
-              href={'/'}
+              href={'/contact'}
             >
               <span className="nav-link px-4">Contact</span>
             </Link>
