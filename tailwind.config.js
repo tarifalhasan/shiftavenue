@@ -19,11 +19,13 @@ module.exports = withMT({
         'cotact-location': "url('/contact1.png')",
         'contact-bg': "url('/contact_bg.png')",
         'contact-bg-mobile': "url('/contact_bg_mobile.png')",
+        'jobs-PerkBenifits-bg': "url('/PerkBenifits.png')",
       },
       colors: {
         'light-dark': 'var(--background-light-gray)',
         fuchsia: 'var(--fuchsia)',
         'dark-purple': 'var(--dark-purple)',
+        'darken-black': 'rgba(3, 8, 21, 0.345098);',
       },
       fontFamily: {
         NeuePlakRegular: "'Neue Plak Regular'",

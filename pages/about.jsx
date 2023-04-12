@@ -18,7 +18,6 @@ import { HiArrowLongRight } from 'react-icons/hi2';
 import regtangle from '../assets/images/contact.svg';
 import regtangleSmall from '../assets/images/contactmobile.svg';
 import location from '../assets/images/location.svg';
-import visitUs from '../assets/images/contact2.png';
 import Image from 'next/image';
 const About = () => (
   <section id="about">

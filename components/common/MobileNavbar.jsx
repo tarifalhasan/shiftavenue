@@ -96,7 +96,7 @@ const MobileMenu = ({ opacity }) => {
             </Link>
             <Link
               className="border-t border-white border-opacity-10 border-l-0 border-r-0"
-              href={'/blog'}
+              href={'/blogs'}
             >
               <span className="nav-link px-4">Blog</span>
             </Link>

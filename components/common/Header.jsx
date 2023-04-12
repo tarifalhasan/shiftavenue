@@ -60,7 +60,7 @@ const Header = ({ opacity }) => {
               </Link>
             </li>
             <li>
-              <Link className="font-NeuePlakRegular" href={'/blog'}>
+              <Link className="font-NeuePlakRegular" href={'/blogs'}>
                 Blog
               </Link>
             </li>

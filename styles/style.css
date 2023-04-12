@@ -27,3 +27,12 @@ label.flex.w-full.h-full.select-none.pointer-events-none.absolute.font-normal.tr
   padding-bottom: 10px !important;
   opacity: 60% !important;
 }
+select#Select\ service::before {
+  outline: none;
+
+  padding: 9px;
+  border-radius: 4px;
+  background: url(/Polygon.png) no-repeat right;
+  -webkit-appearance: none;
+  background-position-x: 99%;
+}

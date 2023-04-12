@@ -91,6 +91,12 @@
   .sub-heading {
     @apply text-[22px] md:text-[30px] lg:text-[35px]  tracking-[-0.6px];
   }
+  .heading2 {
+    @apply text-[22px] md:text-[28px] lg:text-[29px]  tracking-[-0.6px];
+  }
+  .heading3 {
+    @apply text-lg lg:text-2xl font-NeuePlakRegular;
+  }
 }
 h2,
 h1 {
