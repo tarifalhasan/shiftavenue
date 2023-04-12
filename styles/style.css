@@ -1,0 +1,29 @@
+body {
+  background: #15203a;
+  mix-blend-mode: normal;
+}
+
+.slide {
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+.slide-active {
+  background-color: #831f9d;
+  transform: scale(1);
+}
+button.peer.w-full.h-full.bg-transparent.text-blue-gray-700.font-sans.font-normal.text-left.outline.outline-0.focus\:outline-0.disabled\:bg-blue-gray-50.disabled\:border-0.transition-all.border-b.text-sm.pt-4.pb-1\.5.border-blue-gray-200 {
+  font-size: 21px !important;
+  color: white !important;
+}
+label {
+  font-size: 16px !important;
+  color: white !important;
+  padding-bottom: 10px !important;
+  opacity: 60% !important;
+}
+label.flex.w-full.h-full.select-none.pointer-events-none.absolute.font-normal.transition-all.-top-1\.5.after\:content\[\'.\'\].after\:block.after\:w-full.after\:absolute.after\:-bottom-1\.5.left-0.after\:border-b-2.after\:transition-transform.after\:duration-300.text-\[11px\].peer-disabled\:text-transparent.after\:scale-x-0.leading-tight.text-blue-gray-500.after\:border-blue-500 {
+  font-size: 16px !important;
+  color: white !important;
+  padding-bottom: 10px !important;
+  opacity: 60% !important;
+}

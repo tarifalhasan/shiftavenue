@@ -3,25 +3,96 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start: #15203a;
+  --background-light-gray: rgba(52, 64, 95, 0.345098);
+  --fuchsia: #e31e67;
+  --dark-purple: #831f9d;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: 'NexaBold';
+  src: url('/font/webfonts_NexaBold/NexaBold.ttf.woff') format('woff'),
+    url('/font/webfonts_NexaBold/NexaBold.ttf.svg#NexaBold') format('svg'),
+    url('/font/webfonts_NexaBold/NexaBold.ttf.eot'),
+    url('/font/webfonts_NexaBold/NexaBold.ttf.eot?#iefix')
+      format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neue Plak Regular';
+  src: url('/font/neue-plak-cufonfonts/Neue Plak Regular.ttf')
+    format('truetype');
+}
+
+@layer base {
+  body,
+  html {
+    @apply h-full overflow-x-hidden text-[16px] text-white;
+  }
+  input,
+  textarea {
+    @apply !text-2xl placeholder:!text-2xl !text-white placeholder:!opacity-70 placeholder:!text-white;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .container {
+    @apply mx-auto px-5 lg:px-10 2xl:px-0;
+  }
+  #__next {
+    @apply h-full;
+  }
+  #home {
+    background-image: url(../assets/images/home.jpg);
+    @apply relative  bg-no-repeat bg-cover bg-center h-full w-full;
+  }
+  #home::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      50% 88.97% at 50% 48.12%,
+      rgba(27, 42, 58, 0) 0%,
+      rgba(27, 42, 58, 0.827451) 100%
+    );
+  }
+
+  h1 {
+    @apply text-[40px] md:text-[60px] leading-10 md:leading-tight lg:text-[5em] lg:leading-[93px]  lg:tracking-[1.6px] mix-blend-normal;
+  }
+  .btn-primary {
+    background: linear-gradient(
+      269.74deg,
+      #831e9d 1.88%,
+      #aa1e87 40.83%,
+      #e31e67 96.66%
+    );
+    mix-blend-mode: normal;
+    border-radius: 5px;
+  }
+  .pera {
+    @apply text-2xl text-center font-NeuePlakRegular;
+  }
+  .title {
+    @apply font-NeuePlakRegular text-[18px] tracking-[3.6px] uppercase text-[#E31E67];
+  }
+  .heading {
+    @apply text-[32px] md:text-[45px] leading-tight  lg:text-[3.70em] lg:leading-[1.70em] mix-blend-normal;
+  }
+
+  .nav-link {
+    @apply font-NeuePlakRegular   text-[21px] tracking-[0.8px] leading-[50px] mix-blend-normal;
+  }
+  .sub-heading {
+    @apply text-[22px] md:text-[30px] lg:text-[35px]  tracking-[-0.6px];
+  }
+}
+h2,
+h1 {
+  font-family: 'NexaBold';
 }
