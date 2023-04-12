@@ -16,7 +16,7 @@ const LatestJobs = ({ index }) => {
             Full Time
           </span>
         </div>
-        <div>
+        <div className="lg:hidden">
           <button
             onClick={() => {
               setOpenIndex(openIndex === index ? -1 : index);
