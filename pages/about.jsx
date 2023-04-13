@@ -19,6 +19,7 @@ import regtangle from '../assets/images/contact.svg';
 import regtangleSmall from '../assets/images/contactmobile.svg';
 import location from '../assets/images/location.svg';
 import Image from 'next/image';
+import Footer from '@/components/common/Footer';
 const About = () => (
   <section id="about">
     <Header />
@@ -165,6 +166,7 @@ const About = () => (
         </ul>
       </div>
     </main>
+    <Footer />
   </section>
 );
 

@@ -11,6 +11,7 @@ import { FaRegCalendarCheck } from 'react-icons/fa';
 import { RiShareLine } from 'react-icons/ri';
 import { blogsData } from '@/data';
 import Blog from '@/components/Blog';
+import Footer from '@/components/common/Footer';
 const Blogs = () => {
   const [openFilter, setOpenFilter] = useState(false);
   return (
@@ -181,6 +182,7 @@ const Blogs = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </section>
   );
 };

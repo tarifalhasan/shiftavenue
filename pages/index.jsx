@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import Header from '@/components/common/Header';
 import Hero from '@/components/Home/Hero';
 import Services from '@/components/Home/Services';
@@ -12,11 +10,9 @@ import HighLighting from '@/components/Home/Hightlighting';
 import Message from '@/components/Home/Message';
 import Footer from '@/components/common/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export default function Home() {
   return (
-    <main className="">
+    <>
       <Header />
       <MobileMenu />
       <Hero />
@@ -28,7 +24,7 @@ export default function Home() {
       <MissionVisionMobile />
       <Blogs />
       <HighLighting bg="#831F9D" />
-      <div className=" mx-auto bg-home-bg-2-large justify-center  bg-center bg-no-repeat bg-cover flex items-end">
+      <div className=" h-full mx-auto bg-home-bg-2-large justify-center  bg-center bg-no-repeat bg-cover flex items-end">
         <div className=" text-center pb-10">
           <p className="text-xl md:text-2xl py-5 font-NeuePlakRegular  tracking-[6px] uppercase">
             Proven Track Record of Success
@@ -59,6 +55,6 @@ export default function Home() {
       </div>
       <Message />
       <Footer />
-    </main>
+    </>
   );
 }

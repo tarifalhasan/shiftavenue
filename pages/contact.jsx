@@ -19,6 +19,7 @@ import { HiArrowLongRight } from 'react-icons/hi2';
 import location from '../assets/images/location.svg';
 
 import Image from 'next/image';
+import Footer from '@/components/common/Footer';
 const Contact = () => (
   <section id="about">
     <Header opacity={'60'} />
@@ -168,6 +169,7 @@ const Contact = () => (
         </div>
       </div>
     </main>
+    <Footer />
   </section>
 );
 

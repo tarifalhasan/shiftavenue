@@ -8,9 +8,9 @@ const Footer = () => {
   const [theme, setTheme] = useState(true);
 
   return (
-    <footer className=" bg-footer-bg-large overflow-hidden relative w-full overflow-hidden   bg-no-repeat bg-center ">
-      <div className=" relative">
-        <div className="container lg:pt-48 grid gap-y-9 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <footer className=" bg-footer-bg-large !overflow-hidden relative w-full    bg-no-repeat bg-center ">
+      <div className=" ">
+        <div className="container pt-1 lg:pt-48 grid gap-y-9 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <h2 className="text-[22px] lg:text-[24px] font-NeuePlakRegular  font-normal ">
               Our Services
@@ -106,7 +106,7 @@ const Footer = () => {
             <div className="flex items-center justify-center gap-4">
               <MdLightMode size={20} className={`opacity-50`} />
               <Switch
-                onChange={() => setTheme(!theme)}
+                onChange={() => setTheme(false)}
                 id="pink"
                 color="pink"
                 defaultChecked

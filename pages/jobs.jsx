@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@material-tailwind/react';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import LatestJobs from '@/components/LatestJobs';
+import Footer from '@/components/common/Footer';
 const Jobs = () => (
   <section className="jobs">
     <Header opacity={60} />
@@ -99,6 +100,7 @@ const Jobs = () => (
         </div>
       </div>
     </div>
+    <Footer />
   </section>
 );
 

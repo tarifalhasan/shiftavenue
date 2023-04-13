@@ -53,7 +53,7 @@ export default function ServicesTab() {
           {data.map((tab, index) => (
             <li
               key={index}
-              class={`inline-flex p-2 text-lg  font-NeuePlakRegular    rounded-t-lg active dark:text-blue-500 dark:border-blue-500 group ${
+              className={`inline-flex p-2 text-lg  font-NeuePlakRegular    rounded-t-lg active dark:text-blue-500 dark:border-blue-500 group ${
                 index === activeTab
                   ? 'text-[#e31e67] !border-b-2 !border-fuchsia'
                   : ''
