@@ -3,10 +3,15 @@ import ShiftAvenue from '../assets/images/ShiftAvenue-Logo-6D.png';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import { AiFillCaretDown } from 'react-icons/ai';
 import Image from 'next/image';
-const LatestJobs = ({ index }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const LatestJobs = ({ index, jobs }) => {
+  // const [isOpen, setIsOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState(-1);
-
+  const [isOpen, setIsOpen] = useState(new Array(jobs.length).fill(false));
+  function handleToggle(index) {
+    const newIsOpen = [...isOpen];
+    newIsOpen[index] = !isOpen[index];
+    setIsOpen(newIsOpen);
+  }
   return (
     <div className=" bg-darken-black w-full group/item  relative  hover:bg-dark-purple  px-10 py-6 space-y-6  rounded-lg">
       <div className="flex  justify-between items-start lg:block">
@@ -17,12 +22,7 @@ const LatestJobs = ({ index }) => {
           </span>
         </div>
         <div className="lg:hidden">
-          <button
-            onClick={() => {
-              setOpenIndex(openIndex === index ? -1 : index);
-              setIsOpen(!isOpen);
-            }}
-          >
+          <button onClick={() => handleToggle}>
             <AiFillCaretDown size={24} />
           </button>
         </div>

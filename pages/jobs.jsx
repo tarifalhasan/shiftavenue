@@ -96,7 +96,7 @@ const Jobs = () => (
         </div>
         <div className="grid grid-cols-1 gap-6 place-items-center lg:grid-cols-3">
           {LatestJobsData.map((data, i) => (
-            <LatestJobs key={data.id} index={i} />
+            <LatestJobs jobs={LatestJobsData} key={data.id} index={i} />
           ))}
         </div>
       </div>
