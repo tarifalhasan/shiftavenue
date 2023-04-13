@@ -8,8 +8,8 @@ const Footer = () => {
   const [theme, setTheme] = useState(true);
 
   return (
-    <footer className=" bg-footer-bg-large relative w-full overflow-hidden   bg-no-repeat bg-center h-full">
-      <div className="h-full relative">
+    <footer className=" bg-footer-bg-large overflow-hidden relative w-full overflow-hidden   bg-no-repeat bg-center ">
+      <div className=" relative">
         <div className="container lg:pt-48 grid gap-y-9 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <h2 className="text-[22px] lg:text-[24px] font-NeuePlakRegular  font-normal ">
