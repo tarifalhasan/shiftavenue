@@ -22,7 +22,7 @@ const Header = ({ opacity }) => {
   }, []);
   return (
     <header
-      className={`bg-[#030303] bg-opacity-${opacity} z-[999999999999999]  fixed w-full top-0  hidden lg:block`}
+      className={`bg-[#030303] bg-opacity-${opacity}  z-[9999]  fixed w-full top-0  hidden lg:block`}
     >
       <div className="navbar  container">
         <div className="flex-1">
@@ -33,7 +33,10 @@ const Header = ({ opacity }) => {
         <div className="flex-none">
           <ul className="menu menu-horizontal uppercase  text-white px-1">
             <li tabIndex={0}>
-              <a className="font-NeuePlakRegular">
+              <Link
+                href={'/services'}
+                className=" font-NeuePlakRegular hover:text-fuchsia "
+              >
                 Services and offerings
                 <svg
                   className="fill-current "
@@ -44,39 +47,66 @@ const Header = ({ opacity }) => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </a>
-              <ul className="p-2 bg-base-100">
-                <li>
-                  <a>Submenu 1</a>
+              </Link>
+              <ul className="p-2 !text-sm bg-base-100  font-NeuePlakRegular">
+                <li className=" hover:text-fuchsia ">
+                  <a>CyberSecurity Assessment </a>
                 </li>
-                <li>
-                  <a>Submenu 2</a>
+                <li className=" hover:text-fuchsia ">
+                  <a> Cloud Transformation </a>
+                </li>
+                <li className=" hover:text-fuchsia ">
+                  <a> Cloud Foundations </a>
+                </li>
+                <li className=" hover:text-fuchsia ">
+                  <a> Financial Operations (FinOps)</a>
+                </li>
+                <li className=" hover:text-fuchsia ">
+                  <a>Modern Dev Culture </a>
+                </li>
+                <li className=" hover:text-fuchsia ">
+                  <a> Financial Operations (FinOps)</a>
+                </li>
+                <li className=" hover:text-fuchsia ">
+                  <a>CyberSecurity Assessment</a>
                 </li>
               </ul>
             </li>
             <li>
-              <Link className="font-NeuePlakRegular" href={'/jobs'}>
+              <Link
+                className=" font-NeuePlakRegular hover:text-fuchsia  "
+                href={'/jobs'}
+              >
                 Jobs
               </Link>
             </li>
             <li>
-              <Link className="font-NeuePlakRegular" href={'/blogs'}>
+              <Link
+                className=" font-NeuePlakRegular hover:text-fuchsia "
+                href={'/blogs'}
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link className="font-NeuePlakRegular" href={'/about'}>
+              <Link
+                className=" font-NeuePlakRegular hover:text-fuchsia "
+                href={'/about'}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link className="font-NeuePlakRegular" href={'/contact'}>
+              <Link
+                className=" font-NeuePlakRegular hover:text-fuchsia "
+                href={'/contact'}
+              >
                 Contact
               </Link>
             </li>
 
             <li tabIndex={0}>
-              <a className="font-NeuePlakRegular">
+              <a className=" font-NeuePlakRegular hover:text-fuchsia ">
                 <svg
                   width={17}
                   height={17}

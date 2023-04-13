@@ -10,7 +10,7 @@ const Jobs = () => (
   <section className="jobs">
     <Header opacity={60} />
     <MobileMenu opacity={60} />
-    <div className="py-11 lg:py-32">
+    <div className="py-11 bg-jobs-hero-bg-mobile bg-contain  md:bg-jobs-hero-bg md:bg-contain bg-no-repeat lg:py-48">
       <div className="container space-y-16">
         <div className=" space-y-3">
           <span className="title">We’re Hiring</span>
@@ -22,7 +22,7 @@ const Jobs = () => (
             Search Jobs
           </button>
         </div>
-        <div className="grid grid-cols-1 place-items-center lg:grid-cols-2">
+        <div className="grid lg:pt-10 grid-cols-1 place-items-center lg:grid-cols-2">
           <div className=" bg-dark-purple rounded-lg px-7 py-10 space-y-5">
             <h2 className="sub-heading">Our Vision</h2>
             <p className="heading3">
@@ -84,7 +84,7 @@ const Jobs = () => (
       <PerkBenifits />
 
       <div className=" container py-16">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between pb-10 lg:pb-5 items-center">
           <h2 className="heading">Latest Jobs </h2>
           <Button
             variant="text"
@@ -94,10 +94,8 @@ const Jobs = () => (
             <HiArrowLongRight strokeWidth={2} className="h-5 text-white w-5" />
           </Button>
         </div>
-        <div className="grid grid-cols-1 gap-6 place-items-center lg:grid-cols-3">
-          {LatestJobsData.map((data, i) => (
-            <LatestJobs jobs={LatestJobsData} key={data.id} index={i} />
-          ))}
+        <div className="grid grid-cols-1 gap-6  place-items-center lg:grid-cols-3">
+          <LatestJobs jobs={LatestJobsData} />
         </div>
       </div>
     </div>

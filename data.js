@@ -8,7 +8,7 @@ import img7 from './assets/images/blogs/7.svg';
 import img8 from './assets/images/blogs/8.svg';
 import img9 from './assets/images/blogs/9.svg';
 
-export const blogs = [
+export const blogsData = [
   {
     category: 'Cloud hosting',
     title: 'How to secure a Cloud Service Provider?',
@@ -169,5 +169,90 @@ export const LatestJobsData = [
     status: 'Full Time',
     des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
     id: '6',
+  },
+];
+import {
+  TaOfferIcon1,
+  TaOfferIcon2,
+  TaOfferIcon3,
+  TaOfferIcon4,
+  TaOfferIcon5,
+  TaOfferIcon6,
+} from './components/ui/Icons';
+export const OfferData = [
+  {
+    label: 'CyberSecurity Assessment',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    icon: <TaOfferIcon1 />,
+  },
+  {
+    label: 'Cloud Transformation',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    icon: <TaOfferIcon2 />,
+  },
+  {
+    label: 'Cloud Foundations',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    icon: <TaOfferIcon3 />,
+  },
+  {
+    label: 'Financial Operations',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    icon: <TaOfferIcon4 />,
+  },
+  {
+    label: 'Modern Dev Culture',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    icon: <TaOfferIcon5 />,
+  },
+  {
+    label: 'CyberSecurity Assessment',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    icon: <TaOfferIcon6 />,
+  },
+];
+
+export const testimonialData = [
+  {
+    img: '/client.png',
+    name: 'Super John Doe',
+    bio: 'Director of Marketing, Newfront Insurance',
+    say: 'shiftavenue has helped us consistently improve our SEO rankings and increase our organic traffic and revenue. Since they have joined the team (about a year ago) we have more than doubled the amount of revenue from organic sources.',
+    brandLogo: '/sponsars1.png',
+  },
+  {
+    img: '/client.png',
+    name: 'Super John Doe',
+    bio: 'Director of Marketing, Newfront Insurance',
+    say: 'shiftavenue has helped us consistently improve our SEO rankings and increase our organic traffic and revenue. Since they have joined the team (about a year ago) we have more than doubled the amount of revenue from organic sources.',
+    brandLogo: '/sponsars1.png',
+  },
+  {
+    img: '/client.png',
+    name: 'Super John Doe',
+    bio: 'Director of Marketing, Newfront Insurance',
+    say: 'shiftavenue has helped us consistently improve our SEO rankings and increase our organic traffic and revenue. Since they have joined the team (about a year ago) we have more than doubled the amount of revenue from organic sources.',
+    brandLogo: '/sponsars1.png',
+  },
+];
+
+export const WhitepapersData = [
+  {
+    label: 'What’s new with RDS in 2019? My SQL Edition',
+    date: 'Feb 25, 2023',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    img: '/ehitepapper/1.png',
+  },
+  {
+    label: 'What’s new with RDS in 2019? My SQL Edition',
+    date: 'Feb 25, 2023',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    img: '/ehitepapper/1.png',
+  },
+  {
+    label: 'What’s new with RDS in 2019? My SQL Edition',
+    date: 'Feb 25, 2023',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra tellus id ullamcorper pretium.',
+    img: '/ehitepapper/1.png',
   },
 ];

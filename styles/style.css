@@ -36,3 +36,19 @@ select#Select\ service::before {
   -webkit-appearance: none;
   background-position-x: 99%;
 }
+.slider_dots_tarif > li > button::before {
+  font-size: 8px !important;
+
+  width: 14px !important;
+  height: 24px !important;
+
+  color: white !important;
+}
+.slider_dots_tarif > li.slick-active > button::before {
+  font-size: 8px !important;
+
+  width: 16px !important;
+  height: 24px !important;
+  content: icon !important;
+  color: white !important;
+}

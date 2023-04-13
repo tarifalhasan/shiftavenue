@@ -3,39 +3,38 @@ import ShiftAvenue from '../assets/images/ShiftAvenue-Logo-6D.png';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import { AiFillCaretDown } from 'react-icons/ai';
 import Image from 'next/image';
-const LatestJobs = ({ index, jobs }) => {
+const LatestJobs = ({ jobs }) => {
   // const [isOpen, setIsOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState(-1);
   const [isOpen, setIsOpen] = useState(new Array(jobs.length).fill(false));
   function handleToggle(index) {
     const newIsOpen = [...isOpen];
-    newIsOpen[index] = !isOpen[index];
+    newIsOpen.fill(false); // close all other items
+    newIsOpen[index] = true; // open the current item
     setIsOpen(newIsOpen);
   }
-  return (
-    <div className=" bg-darken-black w-full group/item  relative  hover:bg-dark-purple  px-10 py-6 space-y-6  rounded-lg">
+  return jobs.map((data, index) => (
+    <div
+      key={index}
+      className=" bg-darken-black w-full group/item  relative  hover:bg-dark-purple  px-10 py-6 space-y-6  rounded-lg"
+    >
       <div className="flex  justify-between items-start lg:block">
-        <div>
-          <h2 className="heading2">Enterprise Architect</h2>
+        <div onClick={() => handleToggle(index)}>
+          <h2 className="heading2">{data.name}</h2>
           <span className="text-lg font-NeuePlakRegular text-white opacity-30">
-            Full Time
+            {data.status}
           </span>
         </div>
         <div className="lg:hidden">
-          <button onClick={() => handleToggle}>
+          <button onClick={() => handleToggle(index)}>
             <AiFillCaretDown size={24} />
           </button>
         </div>
       </div>
       <div
-        className={` ${
-          isOpen && index === openIndex ? 'block' : 'hidden'
-        } lg:block space-y-4`}
+        className={` ${isOpen[index] ? 'block' : 'hidden'} lg:block space-y-4`}
       >
-        <p className="text-base font-NeuePlakRegular lg:text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra
-          tellus id ullamcorper pretium.
-        </p>
+        <p className="text-base font-NeuePlakRegular lg:text-lg">{data.des}</p>
         <button className="flex  group/edit  font-NeuePlakRegular !hover:bg-none items-center gap-2">
           Apply Now
           <HiArrowLongRight
@@ -48,7 +47,7 @@ const LatestJobs = ({ index, jobs }) => {
         </div>
       </div>
     </div>
-  );
+  ));
 };
 
 export default LatestJobs;

@@ -92,10 +92,19 @@
     @apply text-[22px] md:text-[30px] lg:text-[35px]  tracking-[-0.6px];
   }
   .heading2 {
-    @apply text-[22px] md:text-[28px] lg:text-[29px]  tracking-[-0.6px];
+    @apply text-[22px] md:text-[28px] lg:text-[29px]   tracking-[-0.6px];
   }
   .heading3 {
     @apply text-lg lg:text-2xl font-NeuePlakRegular;
+  }
+  ul.p-2.bg-base-100 {
+    @apply !bg-[#030303] bg-opacity-60 z-[9999999999];
+  }
+  ul.react-tabs__tab-list {
+    @apply !flex !w-full  !justify-between;
+  }
+  .react-tabs {
+    @apply !w-full;
   }
 }
 h2,

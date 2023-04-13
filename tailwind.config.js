@@ -20,12 +20,18 @@ module.exports = withMT({
         'contact-bg': "url('/contact_bg.png')",
         'contact-bg-mobile': "url('/contact_bg_mobile.png')",
         'jobs-PerkBenifits-bg': "url('/PerkBenifits.png')",
+        'jobs-hero-bg': "url('/jobs_bg.png')",
+        'jobs-hero-bg-mobile': "url('/contact_bg_mobile.png')",
+        'services-bg-large': "url('/services.png')",
+        'home-bg-2-large': "url('/home-bg-3.png')",
+        'footer-bg-large': "url('/footer-bg.png')",
       },
       colors: {
         'light-dark': 'var(--background-light-gray)',
         fuchsia: 'var(--fuchsia)',
         'dark-purple': 'var(--dark-purple)',
         'darken-black': 'rgba(3, 8, 21, 0.345098);',
+        'light-black': 'rgba(52, 64, 95, 0.160784)',
       },
       fontFamily: {
         NeuePlakRegular: "'Neue Plak Regular'",

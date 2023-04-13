@@ -9,7 +9,7 @@ import blogHead from '../assets/images/blogHead.svg';
 import { FiUser } from 'react-icons/fi';
 import { FaRegCalendarCheck } from 'react-icons/fa';
 import { RiShareLine } from 'react-icons/ri';
-import { blogs } from '@/data';
+import { blogsData } from '@/data';
 import Blog from '@/components/Blog';
 const Blogs = () => {
   const [openFilter, setOpenFilter] = useState(false);
@@ -171,7 +171,7 @@ const Blogs = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {blogs.map((data, i) => (
+            {blogsData.map((data, i) => (
               <Blog
                 category={data.category}
                 title={data.title}
