@@ -156,7 +156,7 @@ const Services = () => {
             <div
               key={index}
               className={`bg-light-dark rounded-md space-y-5 py-14 px-6 ${
-                index === slideIndex ? 'slide slide-active' : 'slide'
+                index === slideIndex ? 'slide slide-active2' : 'slide'
               }`}
             >
               <div>{data.icons}</div>

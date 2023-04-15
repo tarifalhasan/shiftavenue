@@ -19,9 +19,14 @@ import Image from 'next/image';
 function ServicesTestimonial() {
   const [value, setValue] = useState(0);
 
-  const slides = [
+  const state = [1, 2, 3, 4];
+  {
+    ('You Need to store your data here');
+  }
+
+  const mappping = state.map((data, index) => (
     <div className="py-10">
-      <div className="bg-[#831F9D] rounded relative  min-h-[390px] grid place-items-center   w-full">
+      <div className="bg-[#831F9D]  rounded relative  min-h-[480px] md:min-h-[390px] grid place-items-center   w-full">
         <div className=" space-y-6">
           <Image
             className="w-[80px] h-[80px] object-cover rounded-full block mx-auto"
@@ -62,139 +67,8 @@ function ServicesTestimonial() {
           <Image src={arrow_down} alt="asas" />
         </div>
       </div>
-    </div>,
-
-    <div className="py-10">
-      <div className="bg-[#831F9D] rounded relative  min-h-[390px] grid place-items-center   w-full">
-        <div className=" space-y-6">
-          <Image
-            className="w-[80px] h-[80px] object-cover rounded-full block mx-auto"
-            src={client1}
-            alt={'fg'}
-          />
-          <div>
-            <h2 className="text-lg text-center uppercase leading-3 ">
-              {'Arif Al hasan'}
-            </h2>
-            <p className=" text-center   opacity-60 capitalize text-base font-NeuePlakRegular">
-              Director of Marketing, Newfront Insurance
-            </p>
-          </div>
-          <p className=" text-center lg:w-[85%] mx-auto w-full text-base md:text-xl lg:text-2xl lg:text-4 opacity-60 capitalize font-NeuePlakRegular">
-            “shiftavenue has helped us consistently improve our SEO rankings and
-            increase our organic traffic and revenue. Since they have joined the
-            team (about a year ago) we have more than doubled the amount of
-            revenue from organic sources.”
-          </p>
-        </div>
-        <div className=" absolute -top-[4%]">
-          <svg
-            width="61"
-            height="41"
-            viewBox="0 0 61 41"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M60.424 0.975989H43.528L29.8 40.576H51.976L60.424 0.975989ZM30.68 0.975989H13.784L0.056 40.576H22.232L30.68 0.975989Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-
-        <div className=" absolute bottom-[-4%]">
-          <Image src={arrow_down} alt="asas" />
-        </div>
-      </div>
-    </div>,
-
-    <div className="py-10">
-      <div className="bg-[#831F9D] rounded relative  min-h-[390px] grid place-items-center   w-full">
-        <div className=" space-y-6">
-          <Image
-            className="w-[80px] h-[80px] object-cover rounded-full block mx-auto"
-            src={client1}
-            alt={'fg'}
-          />
-          <div>
-            <h2 className="text-lg text-center uppercase leading-3 ">
-              {'Jahid Hasasn'}
-            </h2>
-            <p className=" text-center   opacity-60 capitalize text-base font-NeuePlakRegular">
-              Director of Marketing, Newfront Insurance
-            </p>
-          </div>
-          <p className=" text-center lg:w-[85%] mx-auto w-full text-base md:text-xl lg:text-2xl lg:text-4 opacity-60 capitalize font-NeuePlakRegular">
-            “shiftavenue has helped us consistently improve our SEO rankings and
-            increase our organic traffic and revenue. Since they have joined the
-            team (about a year ago) we have more than doubled the amount of
-            revenue from organic sources.”
-          </p>
-        </div>
-        <div className=" absolute -top-[4%]">
-          <svg
-            width="61"
-            height="41"
-            viewBox="0 0 61 41"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M60.424 0.975989H43.528L29.8 40.576H51.976L60.424 0.975989ZM30.68 0.975989H13.784L0.056 40.576H22.232L30.68 0.975989Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-
-        <div className=" absolute bottom-[-4%]">
-          <Image src={arrow_down} alt="asas" />
-        </div>
-      </div>
-    </div>,
-    <div className="py-10">
-      <div className="bg-[#831F9D] rounded relative  min-h-[390px] grid place-items-center   w-full">
-        <div className=" space-y-6">
-          <Image
-            className="w-[80px] h-[80px] object-cover rounded-full block mx-auto"
-            src={client1}
-            alt={'fg'}
-          />
-          <div>
-            <h2 className="text-lg text-center uppercase leading-3 ">
-              {'Tarif Al hasan'}
-            </h2>
-            <p className=" text-center   opacity-60 capitalize text-base font-NeuePlakRegular">
-              Director of Marketing, Newfront Insurance
-            </p>
-          </div>
-          <p className=" text-center lg:w-[85%] mx-auto w-full text-base md:text-xl lg:text-2xl lg:text-4 opacity-60 capitalize font-NeuePlakRegular">
-            “shiftavenue has helped us consistently improve our SEO rankings and
-            increase our organic traffic and revenue. Since they have joined the
-            team (about a year ago) we have more than doubled the amount of
-            revenue from organic sources.”
-          </p>
-        </div>
-        <div className=" absolute -top-[4%]">
-          <svg
-            width="61"
-            height="41"
-            viewBox="0 0 61 41"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M60.424 0.975989H43.528L29.8 40.576H51.976L60.424 0.975989ZM30.68 0.975989H13.784L0.056 40.576H22.232L30.68 0.975989Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-
-        <div className=" absolute bottom-[-1%] lg:bottom-[-4%]">
-          <Image src={arrow_down} alt="asas" />
-        </div>
-      </div>
-    </div>,
-  ];
+    </div>
+  ));
 
   const thumbnails = [
     <Image alt="tarif" src={sponsar1} />,
@@ -212,7 +86,7 @@ function ServicesTestimonial() {
       <Carousel
         plugins={['arrows', 'infinite']}
         value={value}
-        slides={slides}
+        slides={mappping}
         onChange={handleChange}
       />
       <Dots

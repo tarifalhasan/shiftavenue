@@ -29,7 +29,7 @@ const Services = () => (
           <ServicesTab />
         </div>
       </div>
-      <div className="bg-[#831F9D] pt-10">
+      <div className="lg:bg-[#831F9D] pt-10">
         <div className="container">
           <h2 className="sub-heading">Services and Offerings</h2>
           <p className="text-[14px] lg:w-[70%] md:text-[16px] lg:text-[19px] text-[#D5D9E6] font-NeuePlakRegular font-normal">
