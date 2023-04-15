@@ -94,7 +94,7 @@ const Offer = () => {
 
   return (
     <div>
-      <div className="hidden xl:grid grid-cols-1 lg:grid-cols-3 gap-10 md:grid-cols-2 gap-y-12 xl:gap-5 2xl:gap-10 py-10 overflow-hidden">
+      <div className="hidden xl:grid  grid-cols-1 lg:grid-cols-3 gap-10 md:grid-cols-2 gap-y-12 xl:gap-5 2xl:gap-10 py-10 overflow-hidden">
         <Item />
       </div>
       <div className="lg:hidden">
@@ -103,7 +103,7 @@ const Offer = () => {
             <div
               key={i}
               className={`  bg-light-dark   bg-opacity-25  group/item  relative  hover:opacity-100   px-10 py-6 space-y-6  rounded-lg ${
-                i === slideIndex ? 'slide slide-active' : 'slide'
+                i === slideIndex ? 'slide slide-active2' : 'slide'
               }`}
             >
               <div> {data.icon}</div>

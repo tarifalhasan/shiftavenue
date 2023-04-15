@@ -29,10 +29,12 @@ const Services = () => (
           <ServicesTab />
         </div>
       </div>
-      <div className="lg:bg-[#831F9D] pt-10">
+      <div className="bg-[#831F9D] mb-16 py-10">
         <div className="container">
-          <h2 className="sub-heading">Services and Offerings</h2>
-          <p className="text-[14px] lg:w-[70%] md:text-[16px] lg:text-[19px] text-[#D5D9E6] font-NeuePlakRegular font-normal">
+          <h2 className="sub-heading text-center lg:text-left">
+            Services and Offerings
+          </h2>
+          <p className="text-[14px] lg:w-[70%] text-center lg:text-left md:text-[16px] lg:text-[19px] text-[#D5D9E6] font-NeuePlakRegular font-normal">
             Our global team of tech strategists, enterprise architects and
             transformation experts help harness technology and innovation as a
             way to reinvent every business.

@@ -40,6 +40,7 @@ body {
   .container {
     @apply mx-auto px-5  xl:px-5 2xl:px-0;
   }
+
   #__next {
     @apply h-full;
     background: #15203a;
@@ -104,6 +105,7 @@ body {
   ul.react-tabs__tab-list {
     @apply !flex !w-full  !justify-between;
   }
+
   .react-tabs {
     @apply !w-full;
   }

@@ -17,7 +17,10 @@
     transition: 0.5s;
   }
 }
-
+.slide-active2 {
+  background: #33155d;
+  transform: scale(1);
+}
 @media screen and (min-width: 720px) and (max-width: 1000px) {
   .slide-active {
     transform: scale(0.8) !important;
