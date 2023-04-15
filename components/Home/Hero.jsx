@@ -10,8 +10,8 @@ const Hero = () => {
     slidesToScroll: 1,
   };
   return (
-    <div id="home" className="">
-      <div className="flex h-full justify-center !z-50 items-center relative container ">
+    <div id="home" className="relative  ">
+      <div className="flex h-full justify-center  min-h-[855px] lg:min-h-[1079px] !z-50 items-center  container ">
         <div className=" text-center relative ">
           <div className=" text-white space-y-5 ">
             <h1 className="">

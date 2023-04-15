@@ -25,11 +25,11 @@
     format('truetype');
 }
 
+html,
+body {
+  @apply h-full text-white;
+}
 @layer base {
-  body,
-  html {
-    @apply h-full overflow-x-hidden text-[16px] text-white;
-  }
   input,
   textarea {
     @apply !text-2xl placeholder:!text-2xl !text-white placeholder:!opacity-70 placeholder:!text-white;
@@ -38,10 +38,11 @@
 
 @layer components {
   .container {
-    @apply mx-auto px-5 lg:px-10 2xl:px-0;
+    @apply mx-auto px-5  xl:px-5 2xl:px-0;
   }
   #__next {
     @apply h-full;
+    background: #15203a;
   }
   #home {
     background-image: url(../assets/images/home.jpg);

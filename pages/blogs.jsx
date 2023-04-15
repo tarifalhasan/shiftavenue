@@ -15,7 +15,7 @@ import Footer from '@/components/common/Footer';
 const Blogs = () => {
   const [openFilter, setOpenFilter] = useState(false);
   return (
-    <section>
+    <section className="bg-[#15203a]">
       <Header />
       <MobileMenu />
       <main className="container py-11 lg:py-28">

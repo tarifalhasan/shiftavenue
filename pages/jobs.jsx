@@ -7,8 +7,9 @@ import { Button } from '@material-tailwind/react';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import LatestJobs from '@/components/LatestJobs';
 import Footer from '@/components/common/Footer';
+import JobsTestimonial from '@/components/jobs/Testimonial';
 const Jobs = () => (
-  <section className="jobs">
+  <section className="jobs bg-[#15203A]">
     <Header opacity={60} />
     <MobileMenu opacity={60} />
     <div className="py-11 bg-jobs-hero-bg-mobile bg-contain  md:bg-jobs-hero-bg md:bg-contain bg-no-repeat lg:py-48">
@@ -81,6 +82,7 @@ const Jobs = () => (
           </div>
           {/* PerkBenifits */}
         </div>
+        <JobsTestimonial />
       </div>
       <PerkBenifits />
 

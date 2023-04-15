@@ -74,7 +74,7 @@ const Services = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -84,9 +84,8 @@ const Services = () => {
         breakpoint: 820,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          initialSlide: 3,
           dots: true,
         },
       },
@@ -94,8 +93,9 @@ const Services = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 3,
-          initialSlide: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
         },
       },
       {
@@ -103,6 +103,8 @@ const Services = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: true,
+          dots: true,
         },
       },
     ],
@@ -136,7 +138,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="container py-16">
+    <div className=" px-0 py-16 ">
       <div className=" space-y-4">
         <span className="title block text-center">Our Services</span>
         <h2 className="heading text-center">

@@ -16,7 +16,7 @@ const LatestJobs = ({ jobs }) => {
   return jobs.map((data, index) => (
     <div
       key={index}
-      className=" bg-darken-black w-full group/item  relative  hover:bg-dark-purple  px-10 py-6 space-y-6  rounded-lg"
+      className=" bg-darken-black w-full group/item  relative  hover:bg-dark-purple  px-5 lg:px-10 py-6 space-y-6  rounded-lg"
     >
       <div className="flex  justify-between items-start lg:block">
         <div onClick={() => handleToggle(index)}>

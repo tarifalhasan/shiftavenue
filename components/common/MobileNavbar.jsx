@@ -16,11 +16,13 @@ const MobileMenu = ({ opacity }) => {
 
   return (
     <div
-      className={`w-full sticky top-0 ${opacity} z-[9999]  lg:hidden bg-[#030303]`}
+      className={`w-full sticky top-0 ${opacity} z-[999999]  lg:hidden bg-[#030303]`}
     >
       <div className="flex justify-between px-4 py-4">
         <div className="flex self-center">
-          <Image src={'/Logo.png'} alt="logo" width={185} height={55} />
+          <Link href={'/'}>
+            <Image src={'/Logo.png'} alt="logo" width={185} height={55} />
+          </Link>
         </div>
         <div className="flex gap-6">
           <span

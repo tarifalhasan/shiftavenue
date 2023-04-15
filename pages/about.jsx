@@ -21,7 +21,7 @@ import location from '../assets/images/location.svg';
 import Image from 'next/image';
 import Footer from '@/components/common/Footer';
 const About = () => (
-  <section id="about">
+  <section id="about" className="bg-[#15203a]">
     <Header />
     <MobileMenu />
     <main className="container relative py-24 space-y-5">

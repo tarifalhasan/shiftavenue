@@ -21,10 +21,10 @@ import location from '../assets/images/location.svg';
 import Image from 'next/image';
 import Footer from '@/components/common/Footer';
 const Contact = () => (
-  <section id="about">
+  <section id="about" className="bg-[#15203a] h-full relative  ">
     <Header opacity={'60'} />
     <MobileMenu />
-    <main className=" bg-contact-bg-mobile   w-auto  bg-contain lg:bg-contact-bg !bg-no-repeat relative py-24 space-y-5">
+    <main className=" relative py-24 space-y-5">
       <div>
         <div className="flex container pb-6 lg:pb-28  flex-col lg:flex-row gap-6">
           <div className=" basis-[60%] w-[80%] space-y-4">
@@ -170,6 +170,9 @@ const Contact = () => (
       </div>
     </main>
     <Footer />
+    <div className=" bg-center  absolute top-0 bg-contact-bg-mobile mx-auto   w-auto  bg-contain lg:bg-contact-bg !bg-no-repeat">
+      <Image src={'/'} />
+    </div>
   </section>
 );
 

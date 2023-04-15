@@ -6,9 +6,10 @@ import Header from '@/components/common/Header';
 import MobileMenu from '@/components/common/MobileNavbar';
 import Offer from '@/components/services/Offer';
 import OnSale from '@/components/services/OnSale';
+import ServicesTestimonial from '@/components/services/Testimonial';
 
 const Services = () => (
-  <section className="">
+  <section className="bg-[#15203a] ">
     <Header opacity={60} />
     <MobileMenu />
     <div className=" ">
@@ -39,11 +40,13 @@ const Services = () => (
           <Offer />
         </div>
       </div>
+
+      <OnSale />
+      <ServicesTestimonial />
       <HighLighting bg={'light-black'} />
       <div className="pt-16">
         <Message />
       </div>
-      <OnSale />
     </div>
     <Footer />
   </section>

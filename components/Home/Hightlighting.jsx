@@ -26,8 +26,8 @@ const HighLighting = ({ bg }) => {
     slidesToScroll: 1,
   };
   return (
-    <div className={`overflow-hidden bg-${bg}`}>
-      <div className=" py-20 relative  ">
+    <div className={` relative bg-${bg}`}>
+      <div className=" py-20   ">
         <Slider className="container" {...settings}>
           {WhitepapersData.map((data, i) => (
             <div key={i} className=" space-y-3">
