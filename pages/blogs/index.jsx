@@ -2,18 +2,29 @@ import Filter from '@/components/Filter';
 import Header from '@/components/common/Header';
 import MobileMenu from '@/components/common/MobileNavbar';
 import React, { useState } from 'react';
-import regtangle from '../assets/images/contact.svg';
+import regtangle from '../../assets/images/contact.svg';
 import Image from 'next/image';
-import realworld from '../assets/images/DigitalWorld-scaled.svg';
-import blogHead from '../assets/images/blogHead.svg';
+
+import blogHead from '../../assets/images/blogHead.svg';
 import { FiUser } from 'react-icons/fi';
 import { FaRegCalendarCheck } from 'react-icons/fa';
 import { RiShareLine } from 'react-icons/ri';
-import { blogsData } from '@/data';
+
 import Blog from '@/components/Blog';
 import Footer from '@/components/common/Footer';
-const Blogs = () => {
+import { client, urlFor } from '@/client';
+import Link from 'next/link';
+const Blogs = ({ data }) => {
   const [openFilter, setOpenFilter] = useState(false);
+
+  const TopBlog = data.find(
+    d => d.slug.current == 'how-to-design-a-cloud-landing-zone'
+  );
+  const dateString = TopBlog._createdAt;
+  const date = new Date(dateString);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = date.toLocaleDateString('en-US', options);
+
   return (
     <section className="bg-[#15203a]">
       <Header />
@@ -22,13 +33,15 @@ const Blogs = () => {
         <div className=" relative  ">
           <div className="flex flex-col lg:flex-row ">
             <div className="basis-[60%] ">
-              <span className="title">Blog</span>
+              <Link href={'/blogs'}>
+                <span className="title">Blog</span>
+              </Link>
               <h2 className="heading">
                 Insights <span className=" text-fuchsia">@</span> shiftavenue
               </h2>
               <p className="heading3">
                 Proprietary data, expert analysis and bold thinking for readers
-                who want to achieve the extraordinary.{' '}
+                who want to achieve the extraordinary.
               </p>
             </div>
           </div>
@@ -44,28 +57,33 @@ const Blogs = () => {
         </div>
         <div className="flex gap-10 flex-col lg:flex-row relative z-30">
           <div className=" basis-[65%]">
-            <Image src={realworld} alt="realworld" />
+            <Image
+              src={urlFor(TopBlog.mainImage).url()}
+              width={750}
+              height={450}
+              alt="realworld"
+            />
             <div className=" ">
-              <span className="title">Cloud hosting</span>
-              <h2 className="sub-heading leading-normal">
-                How to design a Cloud Landing Zone?
-              </h2>
-              <p className="text-lg lg:text-2xl leading-normal font-NeuePlakRegular lg:pb-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
+              <span className="title text-base">
+                {TopBlog.categories[0].title}
+              </span>
+              <h2 className="sub-heading leading-normal">{TopBlog.title}</h2>
+              <p className="text-base lg:text-xl leading-normal font-NeuePlakRegular lg:pb-2">
+                {TopBlog.description.slice(0, 109)}
               </p>
               <hr className="w-full h-[2px] my-6 opacity-20 bg-[#707070]" />
               <div className="flex justify-between">
                 <div className="flex gap-5 items-center">
                   <div className="flex items-center gap-2">
                     <FiUser className="text-fuchsia" size={25} />
-                    <div className="text-xs lg:text-lg text-[#F0F2F8] uppercase">
-                      shiftavenue
+                    <div className="text-xs lg:text-lg font-NeuePlakRegular text-[#F0F2F8] uppercase">
+                      {TopBlog.author.name}
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <FaRegCalendarCheck className="text-fuchsia" size={25} />
                     <div className="text-xs lg:text-lg text-[#F0F2F8] uppercase">
-                      Feb 23, 2023
+                      {formattedDate}
                     </div>
                   </div>
                 </div>
@@ -124,6 +142,7 @@ const Blogs = () => {
             </ul>
           </div>
         </div>
+
         {/* All Insights */}
 
         <div>
@@ -172,12 +191,8 @@ const Blogs = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {blogsData.map((data, i) => (
-              <Blog
-                category={data.category}
-                title={data.title}
-                img={data.img}
-              />
+            {data.map((blog, i) => (
+              <Blog key={i} data={blog} />
             ))}
           </div>
         </div>
@@ -186,5 +201,28 @@ const Blogs = () => {
     </section>
   );
 };
+export async function getServerSideProps() {
+  const query = `*[_type == "post"]{
+  _id,
+  title,
+   author ->{
+     name,
+     image
+   },
+   description,
+   mainImage,
+  slug,
+    categories[]->,
+    _createdAt,
+   
+}`;
+  const data = await client.fetch(query);
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
 
 export default Blogs;

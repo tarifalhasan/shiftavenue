@@ -21,7 +21,7 @@ import location from '../assets/images/location.svg';
 import Image from 'next/image';
 import Footer from '@/components/common/Footer';
 const Contact = () => (
-  <section id="about" className="bg-[#15203a] h-full relative  ">
+  <section id="about" className="bg-[#15203a] relative  ">
     <Header opacity={'60'} />
     <MobileMenu />
     <main className=" relative py-24 space-y-5">
@@ -170,9 +170,7 @@ const Contact = () => (
       </div>
     </main>
     <Footer />
-    <div className=" bg-center  absolute top-0 bg-contact-bg-mobile mx-auto   w-auto  bg-contain lg:bg-contact-bg !bg-no-repeat">
-      <Image src={'/'} />
-    </div>
+    <div className=" bg-center  absolute top-0 bg-contact-bg-mobile mx-auto   w-auto  bg-contain lg:bg-contact-bg !bg-no-repeat"></div>
   </section>
 );
 

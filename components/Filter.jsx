@@ -99,6 +99,7 @@ const Filter = () => {
             <div className="grid gap-2 pt-2 grid-cols-2">
               <select
                 id="Select service"
+                defaultValue={'tarif'}
                 className="w-full bg-[#222C4A] max-w-[191px]  font-medium  relative text-base uppercase  font-NeuePlakRegular   focus:outline-none  rounded-lg outline-none text-white py-3 px-3"
               >
                 <option selected value={'sds'}>

@@ -3,10 +3,7 @@ import React, { useState } from 'react';
 import '@brainhubeu/react-carousel/lib/style.css';
 import client1 from '../../assets/images/jobs/client/1.png';
 import { Dots } from '@brainhubeu/react-carousel';
-import sponsar1 from '../../assets/images/services/testimonial/sponsars/1.png';
-import sponsar2 from '../../assets/images/services/testimonial/sponsars/2.png';
-import sponsar3 from '../../assets/images/services/testimonial/sponsars/3.png';
-import sponsar4 from '../../assets/images/services/testimonial/sponsars/4.png';
+
 import arrow_down from '../../assets/images/services/testimonial/arrow_down.png';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';

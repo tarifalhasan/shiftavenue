@@ -2,41 +2,55 @@ import React from 'react';
 import { FiUser } from 'react-icons/fi';
 import { FaRegCalendarCheck } from 'react-icons/fa';
 import { RiShareLine } from 'react-icons/ri';
+import { urlFor } from '@/client';
 import Image from 'next/image';
-const Blog = ({ img, category, title, description }) => {
+import Link from 'next/link';
+const Blog = ({ data }) => {
+  const dateString = data._createdAt;
+  const date = new Date(dateString);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = date.toLocaleDateString('en-US', options);
+
   return (
     <div className=" basis-[65%] space-y-5">
-      <Image className="w-full rounded-lg" src={img} alt="realworld" />
+      <Link href={`blogs/${data.slug.current}`} className="">
+        <Image
+          className="w-full object-cover min-h-[250px] max-h-[250px] rounded-lg"
+          src={urlFor(data.mainImage).url()}
+          alt={data.title}
+          width={350}
+          height={250}
+        />
+      </Link>
       <div className=" ">
-        <div className="text-lg uppercase  font-NeuePlakRegular opacity-30">
-          {category}
+        <div className="text-xs md:text-base uppercase  font-NeuePlakRegular opacity-30">
+          {data.categories[0].title}
         </div>
-        <h2 className="sub-heading leading-[36px] opacity-80 py-4">{title}</h2>
-        <p className="text-lg lg:text-2xl leading-normal font-NeuePlakRegular lg:pb-2">
-          {description}
-        </p>
+        <h2 className=" text-lg md:text-3xl font-NeuePlakRegular py-4">
+          {data.title}
+        </h2>
 
         <div className="flex justify-between pb-4">
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-5  items-center">
             <div className="flex items-center gap-2">
               <FiUser className="text-fuchsia" size={25} />
-              <div className="text-xs lg:text-lg text-[#F0F2F8] uppercase">
-                shiftavenue
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaRegCalendarCheck className="text-fuchsia" size={25} />
-              <div className="text-xs lg:text-lg text-[#F0F2F8] uppercase">
-                Feb 23, 2023
+              <div className="text-[10px] font-NeuePlakRegular lg:text-base opacity-80 text-[#F0F2F8] uppercase">
+                {data.author.name}
               </div>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <RiShareLine className="text-fuchsia" size={25} />
-            <div className="text-xs lg:text-lg text-[#F0F2F8] uppercase">
-              Share
+            <FaRegCalendarCheck className="text-fuchsia" size={25} />
+            <div className="text-[10px]  opacity-80 font-NeuePlakRegular lg:text-base text-[#F0F2F8] uppercase">
+              {formattedDate}
             </div>
           </div>
+          <a href="/" className="flex items-center gap-2">
+            <RiShareLine className="text-fuchsia" size={25} />
+            <div className="text-[10px]  opacity-80 font-NeuePlakRegular lg:text-base text-[#F0F2F8] uppercase">
+              Share
+            </div>
+          </a>
         </div>
       </div>
     </div>
