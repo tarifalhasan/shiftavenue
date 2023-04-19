@@ -63,7 +63,7 @@ const Blog = ({ post }) => {
               <h2 className="sub-heading leading-[22px] font-NeuePlakRegular ">
                 {post.title}
               </h2>
-              <p className="text-base tracking-tighter  text-justify lg:text-xl leading-normal font-NeuePlakRegular lg:pb-2">
+              <p className="text-base font-medium text-[#D5D9E6] tracking-tighter  text-justify lg:text-xl leading-normal font-NeuePlakRegular lg:pb-2">
                 {post.description}
               </p>
               <hr className="w-full h-[2px] my-6 opacity-20 bg-[#707070]" />
