@@ -53,14 +53,17 @@ const Blog = ({ post }) => {
               src={urlFor(post.mainImage).url()}
               width={750}
               height={450}
+              className="py-5"
               alt="realworld"
             />
-            <div className=" ">
-              <span className="title text-base">
+            <div className=" space-y-4 ">
+              <span className="title tracking-tight text-xs lg:text-base">
                 {post.categories[0].title}
               </span>
-              <h2 className="sub-heading leading-normal">{post.title}</h2>
-              <p className="text-base lg:text-xl leading-normal font-NeuePlakRegular lg:pb-2">
+              <h2 className="sub-heading leading-[22px] font-NeuePlakRegular ">
+                {post.title}
+              </h2>
+              <p className="text-base tracking-tighter  text-justify lg:text-xl leading-normal font-NeuePlakRegular lg:pb-2">
                 {post.description}
               </p>
               <hr className="w-full h-[2px] my-6 opacity-20 bg-[#707070]" />

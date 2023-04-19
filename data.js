@@ -214,21 +214,21 @@ export const OfferData = [
 
 export const testimonialData = [
   {
-    img: '/client.png',
+    img: '/men.webp',
     name: 'Super John Doe',
     bio: 'Director of Marketing, Newfront Insurance',
     say: 'shiftavenue has helped us consistently improve our SEO rankings and increase our organic traffic and revenue. Since they have joined the team (about a year ago) we have more than doubled the amount of revenue from organic sources.',
     brandLogo: '/sponsars1.png',
   },
   {
-    img: '/client.png',
+    img: '/men2.webp',
     name: 'Super John Doe',
     bio: 'Director of Marketing, Newfront Insurance',
     say: 'shiftavenue has helped us consistently improve our SEO rankings and increase our organic traffic and revenue. Since they have joined the team (about a year ago) we have more than doubled the amount of revenue from organic sources.',
     brandLogo: '/sponsars1.png',
   },
   {
-    img: '/client.png',
+    img: '/men3.webp',
     name: 'Super John Doe',
     bio: 'Director of Marketing, Newfront Insurance',
     say: 'shiftavenue has helped us consistently improve our SEO rankings and increase our organic traffic and revenue. Since they have joined the team (about a year ago) we have more than doubled the amount of revenue from organic sources.',

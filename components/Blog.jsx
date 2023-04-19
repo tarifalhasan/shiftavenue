@@ -26,7 +26,7 @@ const Blog = ({ data }) => {
         <div className="text-xs md:text-base uppercase  font-NeuePlakRegular opacity-30">
           {data.categories[0].title}
         </div>
-        <h2 className=" text-lg md:text-3xl font-NeuePlakRegular py-4">
+        <h2 className=" text-2xl md:text-3xl font-NeuePlakRegular py-4">
           {data.title}
         </h2>
 
