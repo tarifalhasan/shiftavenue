@@ -106,7 +106,7 @@ function ServicesTestimonial() {
     <div className="container py-16">
       <Carousel
         plugins={['arrows', 'infinite']}
-        value={value}
+        value={0}
         slides={mappping}
         onChange={handleChange}
       />
