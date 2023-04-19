@@ -4,7 +4,7 @@ import '@brainhubeu/react-carousel/lib/style.css';
 const Carousel = dynamic(() => import('@brainhubeu/react-carousel'), {
   ssr: false,
 });
-import client1 from '/public/client.png';
+
 import { Dots } from '@brainhubeu/react-carousel';
 import sponsar1 from '../../assets/images/services/testimonial/sponsars/1.png';
 import sponsar2 from '../../assets/images/services/testimonial/sponsars/2.png';
@@ -14,38 +14,59 @@ import arrow_down from '../../assets/images/services/testimonial/arrow_down.png'
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-// use the Carousel component as normal
-
 function ServicesTestimonial() {
   const [value, setValue] = useState(0);
 
-  const state = [1, 2, 3, 4];
-  {
-    ('You Need to store your data here');
-  }
+  const Data = [
+    {
+      name: 'Tarif Al Hasan',
+      role: ' Director of Marketing, Newfront Insurance',
+      say: ' “shiftavenue has helped us consistently improve our SEO rankings and   increase our organic traffic and revenue. Since they have joined the  team (about a year ago) we have more than doubled the amount of  revenue from organic sources.”',
+      image: '/men.webp',
+    },
+    {
+      name: 'Arif Al Hasan',
+      role: ' Director of Marketing, Newfront Insurance',
+      say: ' “shiftavenue has helped us consistently improve our SEO rankings and   increase our organic traffic and revenue. Since they have joined the  team (about a year ago) we have more than doubled the amount of  revenue from organic sources.”',
+      image: '/men2.webp',
+    },
+    {
+      name: 'Shakib',
+      role: ' Director of Marketing, Newfront Insurance',
+      say: ' “shiftavenue has helped us consistently improve our SEO rankings and   increase our organic traffic and revenue. Since they have joined the  team (about a year ago) we have more than doubled the amount of  revenue from organic sources.”',
+      image: '/men3.webp',
+    },
+    {
+      name: 'Maruf Sarkar',
+      role: ' Director of Marketing, Newfront Insurance',
+      say: ' “shiftavenue has helped us consistently improve our SEO rankings and   increase our organic traffic and revenue. Since they have joined the  team (about a year ago) we have more than doubled the amount of  revenue from organic sources.”',
+      image: '/men4.webp',
+    },
+  ];
 
-  const mappping = state.map((data, index) => (
-    <div className="py-10">
+  const mappping = Data.map((data, index) => (
+    <div className="py-10 ">
       <div className="bg-[#831F9D]  rounded relative  min-h-[480px] md:min-h-[390px] grid place-items-center   w-full">
         <div className=" space-y-6">
-          <Image
-            className="w-[80px] h-[80px] object-cover rounded-full block mx-auto"
-            src={client1}
-            alt={'fg'}
-          />
+          <div>
+            <Image
+              className="min-w-[85px] !w-[85px] !h-[85px] min-h-[85px] object-cover rounded-full  mx-auto"
+              src={data.image}
+              width={88}
+              height={88}
+              alt={'fg'}
+            />
+          </div>
           <div>
             <h2 className="text-lg text-center uppercase leading-3 ">
-              {'Tarif Al hasan'}
+              {data.name}
             </h2>
             <p className=" text-center   opacity-60 capitalize text-base font-NeuePlakRegular">
               Director of Marketing, Newfront Insurance
             </p>
           </div>
           <p className=" text-center lg:w-[85%] mx-auto w-full text-base md:text-xl lg:text-2xl lg:text-4 opacity-60 capitalize font-NeuePlakRegular">
-            “shiftavenue has helped us consistently improve our SEO rankings and
-            increase our organic traffic and revenue. Since they have joined the
-            team (about a year ago) we have more than doubled the amount of
-            revenue from organic sources.”
+            {data.say}
           </p>
         </div>
         <div className=" absolute -top-[4%]">

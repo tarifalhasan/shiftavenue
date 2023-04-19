@@ -9,7 +9,7 @@ import OnSale from '@/components/services/OnSale';
 import ServicesTestimonial from '@/components/services/Testimonial';
 
 const Services = () => (
-  <section className="bg-[#15203a] ">
+  <section className="bg-[#15203a] overflow-x-hidden ">
     <Header opacity={60} />
     <MobileMenu />
     <div className=" ">
