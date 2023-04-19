@@ -15,7 +15,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 function ServicesTestimonial() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
 
   const Data = [
     {
@@ -106,8 +106,8 @@ function ServicesTestimonial() {
     <div className="container py-16">
       <Carousel
         plugins={['arrows', 'infinite']}
-        value={0}
         slides={mappping}
+        value={value}
         onChange={handleChange}
       />
       <Dots
